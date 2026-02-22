@@ -289,3 +289,20 @@ body {
   border-left: 6px solid #777;
   opacity: 0.6;
 }
+
+/* PROGRESS MAHASISWA */
+
+.status-done {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.status-progress {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.status-locked {
+  color: #aaa;
+  font-weight: bold;
+}
