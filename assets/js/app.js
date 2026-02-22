@@ -66,16 +66,14 @@ if (loginForm) {
     e.preventDefault();
     loginError.textContent = "";
 
-    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const role = document.getElementById("role").value;
 
-    if (!username || !password || !role) {
+    if (!email || !password || !role) {
       loginError.textContent = "Semua field wajib diisi";
       return;
     }
-
-    const email = `${username.toLowerCase()}@elearning.com`;
 
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
@@ -88,13 +86,18 @@ if (loginForm) {
     }
 
     // Ambil role dari profiles
-    const { data: profile } = await supabase
+    const { data: profile, error: profileError } = await supabase
       .from("profiles")
       .select("role")
       .eq("id", data.user.id)
       .single();
 
-    if (!profile || profile.role !== role) {
+    if (profileError || !profile) {
+      loginError.textContent = "Profil tidak ditemukan";
+      return;
+    }
+
+    if (profile.role !== role) {
       loginError.textContent = "Role tidak sesuai";
       return;
     }
