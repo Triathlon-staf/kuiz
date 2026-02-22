@@ -1,6 +1,6 @@
 // ================= SUPABASE INIT =================
 const SUPABASE_URL = "https://fymofqgapfcpbhexhgvy.supabase.co";
-const SUPABASE_KEY = "sb_publishable_DdAzmn3X3NlhJNpEmul0ig_c57EUCxh";
+const SUPABASE_URL = "https://fymofqgafpcpbhexhgvy.supabase.co";
 
 const supabase = window.supabase.createClient(
   SUPABASE_URL,
