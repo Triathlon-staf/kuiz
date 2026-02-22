@@ -17,18 +17,16 @@ if (registerForm) {
     registerError.textContent = "";
 
     const nama = document.getElementById("nama").value.trim();
-    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const role = document.getElementById("role").value;
 
-    if (!nama || !username || !password || !role) {
+    if (!nama || !email || !password || !role) {
       registerError.textContent = "Semua field wajib diisi";
       return;
     }
 
-    const email = `${username.toLowerCase()}@elearning.com`;
-
-    // Auth signup
+    // 1️⃣ REGISTER KE SUPABASE AUTH
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -39,19 +37,22 @@ if (registerForm) {
       return;
     }
 
-    // Insert profile
-    const { error: profileError } = await supabase.from("profiles").insert({
-      id: data.user.id,
-      nama,
-      role,
-    });
+    // 2️⃣ SIMPAN PROFILE
+    const { error: profileError } = await supabase
+      .from("profiles")
+      .insert({
+        id: data.user.id,
+        nama,
+        role,
+      });
 
     if (profileError) {
       registerError.textContent = "Gagal menyimpan profil";
+      console.error(profileError);
       return;
     }
 
-    alert("Registrasi berhasil 🎉");
+    alert("Registrasi berhasil 🎉 Silakan login");
     window.location.href = "index.html";
   });
 }
