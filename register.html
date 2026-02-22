@@ -1,59 +1,26 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Registrasi</title>
+  <title>Register</title>
 </head>
 <body>
-  <h2>Form Registrasi</h2>
-  <form id="register-form">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+<h2>Register</h2>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+<input id="email" placeholder="Email"><br>
+<input id="password" type="password" placeholder="Password"><br>
 
-    <button type="submit">Daftar</button>
-  </form>
+<select id="role">
+  <option value="">Pilih role</option>
+  <option value="mahasiswa">Mahasiswa</option>
+  <option value="dosen">Dosen</option>
+</select><br><br>
 
-  <p id="message"></p>
+<button onclick="register()">Daftar</button>
 
-  <!-- Supabase JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    // Ganti dengan URL dan KEY dari Supabase Project kamu
-    const SUPABASE_URL = "https://fymofqgapfcpbhexhgvy.supabase.co";
-    const SUPABASE_KEY = "sb_publishable_DdAzmn3X3NlhJNpEmul0ig_c57EUCxh";
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+<script src="app.js"></script>
 
-    const form = document.getElementById("register-form");
-    const message = document.getElementById("message");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value;
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      // Registrasi user ke Supabase Auth
-      const { data, error } = await supabase.auth.signUp({
-        email: email,
-        password: password,
-        options: {
-          data: { username: username }
-        }
-      });
-
-      if (error) {
-        message.textContent = "Error: " + error.message;
-      } else {
-        message.textContent = "Registrasi berhasil! Silakan cek email untuk verifikasi.";
-      }
-    });
-  </script>
 </body>
 </html>
