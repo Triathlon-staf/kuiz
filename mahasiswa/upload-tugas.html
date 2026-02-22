@@ -68,6 +68,14 @@
     <a href="dashboard.html" class="back-btn">← Kembali ke Dashboard</a>
 
   </div>
+<script>
+  const form = document.querySelector(".form");
 
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("✅ Tugas berhasil dikirim (dummy)");
+    form.reset();
+  });
+</script>
 </body>
 </html>
