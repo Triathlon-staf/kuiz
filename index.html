@@ -2,29 +2,92 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Login Sistem E-Learning OBE</title>
+  <title>Sistem E-Learning OBE</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="center">
+<body>
 
-  <div class="card login-card">
-    <h2>🎓 Sistem E-Learning OBE</h2>
-    <p>Login untuk melanjutkan</p>
+  <div class="container">
 
-    <form>
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
+    <!-- BLOK KODE -->
+    <section class="code-block">
+      <h3>&lt;/&gt; Kode</h3>
+      <pre>
+HTML Dasar
+ ├─ Struktur Dokumen ✓
+ └─ Form & Input ✓
 
-      <select>
-        <option value="">Login sebagai</option>
-        <option value="dosen">Dosen</option>
-        <option value="mahasiswa">Mahasiswa</option>
-      </select>
+CSS
+ ├─ Styling Dasar ✓
+ ├─ Flexbox (60%)
+ └─ Responsive 🔒
 
-      <button type="submit">Login</button>
-    </form>
+JavaScript
+ ├─ Variabel & Tipe Data ✓
+ ├─ DOM Manipulation (40%)
+ └─ Fetch API 🔒
+      </pre>
+    </section>
 
-    <p class="error">⚠️ Username atau password salah</p>
+    <!-- STRUKTUR SISTEM -->
+    <section class="card">
+      <h2>🧩 Struktur Sistem (RPL)</h2>
+
+      <h3>1️⃣ Aktor</h3>
+      <ul>
+        <li>Admin</li>
+        <li>Dosen</li>
+        <li>Mahasiswa</li>
+      </ul>
+    </section>
+
+    <!-- USE CASE -->
+    <section class="card">
+      <h3>2️⃣ Use Case Utama</h3>
+
+      <p><strong>Mahasiswa:</strong></p>
+      <ul>
+        <li>Login</li>
+        <li>Lihat skill tree</li>
+        <li>Lihat progress</li>
+        <li>Upload tugas</li>
+      </ul>
+
+      <p><strong>Dosen:</strong></p>
+      <ul>
+        <li>Buat skill tree</li>
+        <li>Mapping tugas ke skill</li>
+        <li>Nilai mahasiswa</li>
+        <li>Lihat analitik</li>
+      </ul>
+    </section>
+
+    <!-- UML -->
+    <section class="card">
+      <h3>3️⃣ UML yang Bisa Kamu Pakai</h3>
+      <ul>
+        <li>Use Case Diagram</li>
+        <li>Activity Diagram (alur penilaian)</li>
+        <li>ERD (Mahasiswa, Skill, Nilai, Mata Kuliah, CPL)</li>
+      </ul>
+    </section>
+
+    <!-- DATABASE -->
+    <section class="card">
+      <h2>🗄️ Contoh Struktur Database Sederhana</h2>
+
+      <p><strong>Tabel:</strong></p>
+      <ul>
+        <li>mahasiswa</li>
+        <li>dosen</li>
+        <li>matakuliah</li>
+        <li>skill</li>
+        <li>skill_prerequisite</li>
+        <li>nilai_skill</li>
+        <li>cpl</li>
+      </ul>
+    </section>
+
   </div>
 
 </body>
