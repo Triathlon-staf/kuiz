@@ -14,7 +14,9 @@
     <h1 class="login-title">E-Learning OBE</h1>
     <p class="login-subtitle">Silakan login untuk melanjutkan</p>
 
-    <form class="login-form">
+    <!-- 🔑 LOGIN FORM -->
+    <form class="login-form" id="loginForm">
+
       <div class="form-group">
         <label for="username">Username / Email</label>
         <input 
@@ -49,13 +51,21 @@
       <button type="submit" class="btn-login">
         Login
       </button>
+
     </form>
 
-    <p class="login-error"></p>
+    <!-- ERROR MESSAGE -->
+    <p class="login-error" id="loginError"></p>
+
+    <!-- REGISTER LINK -->
+    <p class="login-register">
+      Belum punya akun?
+      <a href="register.html">Daftar di sini</a>
+    </p>
 
   </div>
 
-  <!-- ✅ SATU BARIS INI YANG BIKIN JS DUMMY JALAN -->
+  <!-- JS -->
   <script src="assets/js/app.js"></script>
 
 </body>
