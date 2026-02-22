@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapping Tugas ke Skill | Dosen</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Mapping Tugas ke Skill</h1>
+      <p>Hubungkan tugas dengan skill yang dinilai</p>
+      <a href="dashboard.html">← Kembali ke Dashboard</a>
+    </header>
+
+    <!-- FORM MAPPING -->
+    <section class="card">
+      <h3>🔗 Mapping Baru</h3>
+
+      <form class="form">
+
+        <div class="form-group">
+          <label>Mata Kuliah</label>
+          <select>
+            <option>Algoritma & Pemrograman</option>
+            <option>Web Programming</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Tugas</label>
+          <select>
+            <option>Tugas 1</option>
+            <option>Tugas 2</option>
+            <option>UTS</option>
+            <option>UAS</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Skill yang Dinilai</label>
+          <select>
+            <option>HTML Dasar</option>
+            <option>CSS Dasar</option>
+            <option>JavaScript Dasar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Bobot Penilaian (%)</label>
+          <input type="number" placeholder="Contoh: 30">
+        </div>
+
+        <button class="btn-login" type="button">
+          Simpan Mapping
+        </button>
+
+      </form>
+    </section>
+
+    <!-- LIST MAPPING -->
+    <section class="card">
+      <h3>📋 Daftar Mapping</h3>
+
+      <ul>
+        <li>
+          Web Programming – Tugas 1 → HTML Dasar (30%)
+        </li>
+        <li>
+          Web Programming – Tugas 2 → CSS Dasar (40%)
+        </li>
+        <li>
+          Web Programming – UAS → JavaScript Dasar (60%)
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
