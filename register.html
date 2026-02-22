@@ -2,94 +2,58 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Register | E-Learning OBE</title>
-
-  <!-- CSS utama -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Registrasi</title>
 </head>
-<body class="login-page">
+<body>
+  <h2>Form Registrasi</h2>
+  <form id="register-form">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
 
-  <div class="login-container">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-    <h1 class="login-title">E-Learning OBE</h1>
-    <p class="login-subtitle">Registrasi akun baru</p>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
 
-    <!-- 📝 REGISTER FORM -->
-    <form class="login-form" id="registerForm">
+    <button type="submit">Daftar</button>
+  </form>
 
-      <div class="form-group">
-        <label for="nama">Nama Lengkap</label>
-        <input
-          type="text"
-          id="nama"
-          name="nama"
-          placeholder="Masukkan nama lengkap"
-          required
-        >
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="contoh@email.com"
-          required
-        >
-      </div>
-      
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Masukkan username"
-          required
-        >
-      </div>
+  <p id="message"></p>
 
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Masukkan password"
-          required
-        >
-      </div>
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Ganti dengan URL dan KEY dari Supabase Project kamu
+    const SUPABASE_URL = "https://fymofqgapfcpbhexhgvy.supabase.co";
+    const SUPABASE_KEY = "sb_publishable_DdAzmn3X3NlhJNpEmul0ig_c57EUCxh";
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-      <div class="form-group">
-        <label for="role">Daftar sebagai</label>
-        <select id="role" name="role" required>
-          <option value="">-- Pilih Role --</option>
-          <option value="mahasiswa">Mahasiswa</option>
-          <option value="dosen">Dosen</option>
-        </select>
-      </div>
+    const form = document.getElementById("register-form");
+    const message = document.getElementById("message");
 
-      <button type="submit" class="btn-login">
-        Daftar
-      </button>
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    </form>
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-    <!-- ERROR / INFO -->
-    <p class="login-error" id="registerError"></p>
+      // Registrasi user ke Supabase Auth
+      const { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+          data: { username: username }
+        }
+      });
 
-    <!-- LINK KE LOGIN -->
-    <p class="login-register">
-      Sudah punya akun?
-      <a href="index.html">Login di sini</a>
-    </p>
-
-  </div>
-<!-- SUPABASE SDK (WAJIB) -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-  
-  <!-- JS -->
-  <script src="assets/js/app.js"></script>
-
+      if (error) {
+        message.textContent = "Error: " + error.message;
+      } else {
+        message.textContent = "Registrasi berhasil! Silakan cek email untuk verifikasi.";
+      }
+    });
+  </script>
 </body>
 </html>
