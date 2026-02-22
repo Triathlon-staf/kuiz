@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Tugas</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>📤 Upload Tugas</h1>
+    <p>Kirim tugas sesuai skill & mata kuliah</p>
+
+    <!-- FORM UPLOAD -->
+    <section class="card">
+
+      <form class="form">
+
+        <label>Mata Kuliah</label>
+        <select required>
+          <option value="">-- Pilih Mata Kuliah --</option>
+          <option>Pemrograman Web</option>
+          <option>Basis Data</option>
+        </select>
+
+        <label>Tugas</label>
+        <select required>
+          <option value="">-- Pilih Tugas --</option>
+          <option>Tugas HTML</option>
+          <option>Tugas CSS</option>
+          <option>Tugas JavaScript</option>
+        </select>
+
+        <label>File Tugas</label>
+        <input type="file" required>
+
+        <button type="submit">Upload</button>
+
+      </form>
+
+    </section>
+
+    <!-- STATUS TUGAS -->
+    <section class="card">
+      <h3>Status Tugas</h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tugas</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tugas HTML</td>
+            <td class="status-done">Dinilai</td>
+          </tr>
+          <tr>
+            <td>Tugas CSS</td>
+            <td class="status-progress">Menunggu</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <a href="dashboard.html" class="back-btn">← Kembali ke Dashboard</a>
+
+  </div>
+
+</body>
+</html>
