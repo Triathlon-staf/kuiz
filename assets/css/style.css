@@ -164,3 +164,23 @@ body {
 .card li {
   margin-bottom: 8px;
 }
+
+/* ===== TABLE ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  text-align: left;
+}
+
+.table input {
+  width: 80px;
+  padding: 6px;
+}
+
