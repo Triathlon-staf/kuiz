@@ -2,91 +2,63 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Sistem E-Learning OBE</title>
+  <title>Login | E-Learning OBE</title>
+
+  <!-- CSS utama -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="login-page">
 
-  <div class="container">
+  <div class="login-container">
 
-    <!-- BLOK KODE -->
-    <section class="code-block">
-      <h3>&lt;/&gt; Kode</h3>
-      <pre>
-HTML Dasar
- ├─ Struktur Dokumen ✓
- └─ Form & Input ✓
+    <h1 class="login-title">E-Learning OBE</h1>
+    <p class="login-subtitle">Silakan login untuk melanjutkan</p>
 
-CSS
- ├─ Styling Dasar ✓
- ├─ Flexbox (60%)
- └─ Responsive 🔒
+    <form class="login-form">
+      <!-- USERNAME / EMAIL -->
+      <div class="form-group">
+        <label for="username">Username / Email</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          placeholder="Masukkan username"
+          required
+        >
+      </div>
 
-JavaScript
- ├─ Variabel & Tipe Data ✓
- ├─ DOM Manipulation (40%)
- └─ Fetch API 🔒
-      </pre>
-    </section>
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Masukkan password"
+          required
+        >
+      </div>
 
-    <!-- STRUKTUR SISTEM -->
-    <section class="card">
-      <h2>🧩 Struktur Sistem (RPL)</h2>
+      <!-- ROLE -->
+      <div class="form-group">
+        <label for="role">Login sebagai</label>
+        <select id="role" name="role" required>
+          <option value="">-- Pilih Role --</option>
+          <option value="mahasiswa">Mahasiswa</option>
+          <option value="dosen">Dosen</option>
+        </select>
+      </div>
 
-      <h3>1️⃣ Aktor</h3>
-      <ul>
-        <li>Admin</li>
-        <li>Dosen</li>
-        <li>Mahasiswa</li>
-      </ul>
-    </section>
+      <!-- BUTTON -->
+      <button type="submit" class="btn-login">
+        Login
+      </button>
+    </form>
 
-    <!-- USE CASE -->
-    <section class="card">
-      <h3>2️⃣ Use Case Utama</h3>
-
-      <p><strong>Mahasiswa:</strong></p>
-      <ul>
-        <li>Login</li>
-        <li>Lihat skill tree</li>
-        <li>Lihat progress</li>
-        <li>Upload tugas</li>
-      </ul>
-
-      <p><strong>Dosen:</strong></p>
-      <ul>
-        <li>Buat skill tree</li>
-        <li>Mapping tugas ke skill</li>
-        <li>Nilai mahasiswa</li>
-        <li>Lihat analitik</li>
-      </ul>
-    </section>
-
-    <!-- UML -->
-    <section class="card">
-      <h3>3️⃣ UML yang Bisa Kamu Pakai</h3>
-      <ul>
-        <li>Use Case Diagram</li>
-        <li>Activity Diagram (alur penilaian)</li>
-        <li>ERD (Mahasiswa, Skill, Nilai, Mata Kuliah, CPL)</li>
-      </ul>
-    </section>
-
-    <!-- DATABASE -->
-    <section class="card">
-      <h2>🗄️ Contoh Struktur Database Sederhana</h2>
-
-      <p><strong>Tabel:</strong></p>
-      <ul>
-        <li>mahasiswa</li>
-        <li>dosen</li>
-        <li>matakuliah</li>
-        <li>skill</li>
-        <li>skill_prerequisite</li>
-        <li>nilai_skill</li>
-        <li>cpl</li>
-      </ul>
-    </section>
+    <!-- ERROR (dummy dulu) -->
+    <p class="login-error">
+      <!-- nanti diisi JS -->
+    </p>
 
   </div>
 
