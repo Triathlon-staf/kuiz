@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kelola Skill Tree | Dosen</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Kelola Skill Tree</h1>
+      <p>Buat dan atur skill beserta prerequisite</p>
+      <a href="dashboard.html">← Kembali ke Dashboard</a>
+    </header>
+
+    <!-- FORM TAMBAH SKILL -->
+    <section class="card">
+      <h3>➕ Tambah Skill Baru</h3>
+
+      <form class="form">
+        <div class="form-group">
+          <label>Nama Skill</label>
+          <input type="text" placeholder="Contoh: HTML Dasar">
+        </div>
+
+        <div class="form-group">
+          <label>Deskripsi</label>
+          <input type="text" placeholder="Penjelasan singkat skill">
+        </div>
+
+        <div class="form-group">
+          <label>Prerequisite</label>
+          <select>
+            <option value="">-- Tidak ada --</option>
+            <option>Algoritma Dasar</option>
+            <option>Logika Pemrograman</option>
+          </select>
+        </div>
+
+        <button class="btn-login" type="button">
+          Simpan Skill
+        </button>
+      </form>
+    </section>
+
+    <!-- LIST SKILL -->
+    <section class="card">
+      <h3>📋 Daftar Skill</h3>
+
+      <ul>
+        <li>
+          HTML Dasar
+          <span>(Aktif)</span>
+        </li>
+        <li>
+          CSS Dasar
+          <span>(Aktif)</span>
+        </li>
+        <li>
+          JavaScript Dasar
+          <span>(Terkunci)</span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
