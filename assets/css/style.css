@@ -551,3 +551,39 @@ body {
 .welcome-card img {
   height: 160px;
 }
+
+.profile-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.profile-subtitle {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.profile-card {
+  width: 380px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.role-form {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
