@@ -11,7 +11,6 @@
   <h1>Lengkapi Profil Mahasiswa</h1>
 
   <div class="profile-card">
-
     <input id="nama" placeholder="Nama Lengkap">
     <input id="nim" placeholder="NIM">
     <input id="prodi" placeholder="Program Studi">
@@ -20,15 +19,27 @@
     <button onclick="simpanProfilMahasiswa()">
       Simpan Profil
     </button>
-
   </div>
 </div>
 
-<!-- Firebase -->
+<!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
 
+<!-- 🔥 WAJIB: INIT FIREBASE -->
+<script>
+  const firebaseConfig = {
+    apiKey: "API_KEY_KAMU",
+    authDomain: "PROJECT_ID.firebaseapp.com",
+    projectId: "PROJECT_ID",
+    appId: "APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Logic -->
 <script src="assets/js/profile-mahasiswa.js"></script>
 </body>
 </html>
