@@ -18,9 +18,7 @@
 
   <div class="login-card">
 
-    <div class="avatar">
-      👤
-    </div>
+    <div class="avatar">👤</div>
 
     <div class="input-group">
       <span>👤</span>
@@ -49,22 +47,20 @@
 
 </div>
 
-<!-- Firebase -->
+<!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 
 <script>
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyATAGNZhzQmzVq1mcblSmA9c2C_6D4BdRQ",
-  authDomain: "kuis-ddb25.firebaseapp.com",
-  databaseURL: "https://kuis-ddb25-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "kuis-ddb25",
-  storageBucket: "kuis-ddb25.firebasestorage.app",
-  messagingSenderId: "776132429610",
-  appId: "1:776132429610:web:eb87368cb08e99550b8053",
-  measurementId: "G-7MX66ZW9GJ"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyATAGNZhzQmzVq1mcblSmA9c2C_6D4BdRQ",
+    authDomain: "kuis-ddb25.firebaseapp.com",
+    projectId: "kuis-ddb25",
+    appId: "1:776132429610:web:eb87368cb08e99550b8053"
+  };
+
+  // 🔥 INI YANG WAJIB
+  firebase.initializeApp(firebaseConfig);
 </script>
 
 <script src="assets/js/app.js"></script>
