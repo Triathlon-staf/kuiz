@@ -422,20 +422,6 @@ body {
   transition: 0.3s;
 }
 
-.btn-register:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.btn-secondary {
-  margin-top: 10px;
-  background: transparent;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
 .btn-secondary {
   margin-top: 10px;
   background: transparent;
