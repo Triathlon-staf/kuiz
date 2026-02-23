@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lengkapi Profil | Smart Quiz System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="bg-shape left"></div>
+<div class="bg-shape right"></div>
+
+<div class="profile-wrapper">
+
+  <h1 class="profile-title">
+    Lengkapi Profil Anda
+  </h1>
+
+  <p class="profile-subtitle">
+    Data ini digunakan untuk keperluan akademik
+  </p>
+
+  <div class="profile-card">
+
+    <!-- NAMA -->
+    <div class="input-group">
+      <span>👤</span>
+      <input id="nama" placeholder="Nama Lengkap">
+    </div>
+
+    <!-- ROLE (READ ONLY) -->
+    <div class="input-group">
+      <span>🎓</span>
+      <input id="role" disabled>
+    </div>
+
+    <!-- MAHASISWA -->
+    <div id="form-mahasiswa" class="role-form hidden">
+      <div class="input-group">
+        <span>🆔</span>
+        <input id="nim" placeholder="NIM">
+      </div>
+
+      <div class="input-group">
+        <span>📚</span>
+        <input id="prodi" placeholder="Program Studi">
+      </div>
+
+      <div class="input-group">
+        <span>📅</span>
+        <input id="angkatan" placeholder="Angkatan">
+      </div>
+    </div>
+
+    <!-- DOSEN -->
+    <div id="form-dosen" class="role-form hidden">
+      <div class="input-group">
+        <span>🆔</span>
+        <input id="nip" placeholder="NIP">
+      </div>
+
+      <div class="input-group">
+        <span>🏫</span>
+        <input id="jabatan" placeholder="Jabatan">
+      </div>
+    </div>
+
+    <button onclick="simpanProfil()" class="btn-login">
+      SIMPAN PROFIL
+    </button>
+
+  </div>
+
+</div>
+
+<script src="assets/js/profile.js"></script>
+</body>
+</html>
