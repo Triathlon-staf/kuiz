@@ -422,7 +422,7 @@ body {
   transition: 0.3s;
 }
 
-.btn-login:hover {
+.btn-register:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
@@ -436,18 +436,11 @@ body {
   cursor: pointer;
 }
 
-.switch-text {
-  margin-top: 15px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.switch-text a {
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.switch-text a:hover {
-  text-decoration: underline;
+.btn-secondary {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
