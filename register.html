@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | E-Learning OBE</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
 
-<input id="email" placeholder="Email">
-<input id="password" type="password" placeholder="Password">
+<div class="bg-shape left"></div>
+<div class="bg-shape right"></div>
 
-<select id="role">
-  <option value="">Pilih role</option>
-  <option value="mahasiswa">Mahasiswa</option>
-  <option value="dosen">Dosen</option>
-</select>
+<div class="login-wrapper">
 
-<button onclick="register()">Daftar</button>
+  <h1 class="welcome-text">
+    WELCOME TO <span>SMART SYSTEM</span>
+  </h1>
+
+  <div class="login-card">
+
+    <div class="avatar">
+      👤
+    </div>
+
+    <div class="input-group">
+      <span>👤</span>
+      <input id="email" placeholder="Email">
+    </div>
+
+    <div class="input-group">
+      <span>🔒</span>
+      <input id="password" type="password" placeholder="Password">
+    </div>
+
+    <div class="input-group">
+      <span>🎓</span>
+      <select id="role">
+        <option value="">Pilih role</option>
+        <option value="mahasiswa">Mahasiswa</option>
+        <option value="dosen">Dosen</option>
+      </select>
+    </div>
+
+    <button onclick="register()" class="btn-login">
+      LOGIN
+    </button>
+
+  </div>
+
+</div>
 
 <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
@@ -22,10 +58,7 @@
     apiKey: "AIzaSyATAGNZhzQmzVq1mcblSmA9c2C_6D4BdRQ",
     authDomain: "kuis-ddb25.firebaseapp.com",
     projectId: "kuis-ddb25",
-    storageBucket: "kuis-ddb25.firebasestorage.app",
-    messagingSenderId: "776132429610",
-    appId: "1:776132429610:web:eb87368cb08e99550b8053",
-    measurementId: "G-7MX66ZW9GJ"
+    appId: "1:776132429610:web:eb87368cb08e99550b8053"
   };
   firebase.initializeApp(firebaseConfig);
 </script>
