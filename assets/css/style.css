@@ -306,3 +306,123 @@ body {
   color: #aaa;
   font-weight: bold;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #e7e6df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background shapes */
+.bg-shape {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: #f3ff3d;
+  border-radius: 40px;
+  filter: blur(2px);
+}
+
+.bg-shape.left {
+  left: -80px;
+  bottom: 120px;
+}
+
+.bg-shape.right {
+  right: -80px;
+  top: 80px;
+}
+
+/* Wrapper */
+.login-wrapper {
+  text-align: center;
+  z-index: 2;
+}
+
+/* Welcome text */
+.welcome-text {
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #222;
+}
+
+.welcome-text span {
+  background: #f3ff3d;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* Card */
+.login-card {
+  width: 320px;
+  padding: 30px 24px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Avatar */
+.avatar {
+  width: 60px;
+  height: 60px;
+  margin: -60px auto 20px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Input */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+}
+
+.input-group span {
+  margin-right: 8px;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Button */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #f3ff3d;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
