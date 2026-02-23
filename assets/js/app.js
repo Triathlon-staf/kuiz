@@ -1,7 +1,6 @@
 const auth = firebase.auth();
 
-// REGISTER
-function register() {
+function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const role = document.getElementById("role").value;
@@ -11,15 +10,18 @@ function register() {
     return;
   }
 
-  auth.createUserWithEmailAndPassword(email, password)
+  auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       localStorage.setItem("role", role);
-      alert("Register berhasil");
-      location.href = "index.html";
+
+      if (role === "mahasiswa") {
+        location.href = "mahasiswa/dashboard.html";
+      } else {
+        location.href = "dosen/dashboard.html";
+      }
     })
     .catch(err => alert(err.message));
 }
-
 // LOGIN
 function login() {
   const email = document.getElementById("email").value;
